@@ -6,3 +6,4 @@ node_modules/
 remark-slug.js
 remark-slug.min.js
 yarn.lock
+.history

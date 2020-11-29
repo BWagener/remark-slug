@@ -217,6 +217,12 @@ test('remark-slug', function (t) {
     'should create GitHub slugs'
   )
 
+  t.deepEqual(
+    process(['## ÄäÜüÖöß', ''].join('\n')),
+    u('root', [heading('ÄäÜüÖöß', 'aeaeueueoeoess')]),
+    'should handle Umlaute'
+  )
+
   t.end()
 })
 
