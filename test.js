@@ -139,6 +139,12 @@ test('slugs', function (t) {
     )
   ]));
 
+  t.deepEqual(
+    process(["## ÄäÜüÖöß", ""].join("\n")),
+    u("root", [heading("ÄäÜüÖöß", "aeaeueueoeoess")]),
+    "should handle Umlaute"
+  );
+
   t.end();
 });
 
